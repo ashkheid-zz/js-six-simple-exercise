@@ -1,0 +1,22 @@
+{
+  "name": "js-six-simple-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashkheid/js-six-simple-exercise.git"
+  },
+  "author": "Ashkan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashkheid/js-six-simple-exercise/issues"
+  },
+  "homepage": "https://github.com/ashkheid/js-six-simple-exercise#readme",
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
