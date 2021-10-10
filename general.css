@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #ededed;
+  box-sizing: border-box;
+}
+
+body {
+  margin-inline: 2rem;
+}
+
+code {
+  font-family: MyFancyCustomFont, monospace;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  padding: 0.5rem 1rem 0.6rem;
+  border-radius: 0.3rem;
+  color: #f5d67b;
+  background: #1b1b1b;
+  border-left: 3px solid #f5d67b;
+}
+
+button#run {
+  border: none;
+  background-color: #f5d67b;
+  padding: 1.5em;
+  width: 50vw;
+  border-radius: 3px;
+}
+
+button#run:hover {
+  background-color: #f1b461;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  background-color: lightgray;
+  padding: 1em;
+  margin-inline: 1em;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
