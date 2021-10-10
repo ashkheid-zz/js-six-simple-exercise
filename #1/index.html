@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="../general.css">
+    <title>Exercise One</title>
+  </head>
+  <body>
+    <h1>repeatString Method</h1>
+    <p>
+      Write a function that simply repeats the string based on given number of
+      times. The function accepts two argument: a string and a number.
+    </p>
+
+    <code>repeatString('Ha', 2) // returns 'HaHa'</code>
+
+    <p>
+      Make sure your function checks second number is a number. For example if a
+      second entry is “5”, your function has to change it to 5.
+    </p>
+
+    <p>
+      Also try to write it with Arrow function syntax.<br />
+      Hints:
+      <ul>
+        <li>You need a loop.</li>
+        <li>Create a variable to hold the string you're going to return, create a loop that repeats the given number of times and add the given string to the result on each loop.</li>
+        <li>Have you heard of concatenation?</li>
+      </ul>
+    </p>
+    <br />
+    <hr />
+    <br />
+    <label for="stringToRepeat">Enter your desired string to repeat:</label>
+    <input type="text" id="stringToRepeat" name="stringToRepeat"><br><br>
+    <label for="repeatRate">How many times do you want it to be repeated?</label>
+    <input type="text" id="repeatRate" name="repeatRate"><br><br>
+    <button id="run">RUN</button>
+  </body>
+</html>
