@@ -2,8 +2,8 @@ let objCount = document.getElementById("objCount"),
   getPrfrmrs = document.getElementById("getPrfrmrs"),
   getTtl = document.getElementById("getTtl");
 
-let namesIndex,
-  booksIndex,
+let namesIndex, // going to store indexes of names array
+  booksIndex, // going to store indexes of books array
   names = [
     "Balbina Olofsson",
     "Pippi Janssens",
@@ -50,30 +50,36 @@ let namesIndex,
   ];
 
 function randomUniqueNum(range, outputCount) {
+  // This function is going to create an array,
+  // with (outputCount) items, filled woth random number between 0 to(range)
+  // the result would be an array filled with random uniue numbers
   let arr = [];
   for (let i = 0; i < range; i++) {
     arr.push(i);
-  }
+  } // output: arr = [0, 1, 2, 3, ..., i-1]
 
   let result = [];
 
   for (let i = 1; i <= outputCount; i++) {
-    const random = Math.floor(Math.random() * (range - i));
+    // (outputCount) is the amount of numbers that user wish to have at the end
+    const random = Math.floor(Math.random() * (range - i)); // generating a random number between 0 to (range - i) | 0 <= random < (range - i)
     result.push(arr[random]);
-    arr[random] = arr[range - i];
+    arr[random] = arr[range - i]; //replacing each picked (random) number in array with another unused one.
   }
 
   return result;
 }
 
+// creating two arrays filled with random uniqque numbers between 0 to 19
+// it's going to help creating a randome object.values
 namesIndex = randomUniqueNum(20, 20);
 booksIndex = randomUniqueNum(20, 20);
 
 function eventGenerator(count) {
-  if (count > 0 && count <= 20) {
+  if (count > 0 && count <= 20) { // I'm not ganna let you create more than 20 events. You can't enter zero or negative value either.
     let result = [];
     let obj = {};
-    for (let i = 0; i < count; ++i) {
+    for (let i = 0; i < count; ++i) { // filling the result with randomized-value object
       obj = {
         performer: names[namesIndex[i]],
         title: books[booksIndex[i]],
@@ -84,12 +90,13 @@ function eventGenerator(count) {
   } else {
     let error =
       "Notting Created! The number you add should be greater than 0 and less than 21";
-    addElement(error);
+    addElement(error); // printing the error message into HTML document
     throw new Error(error);
   }
 }
 
 function getThePerformers(object) {
+  // returning an array of values out of given array filled with objects
   let result = [];
   for (let obj of object) {
     result.push(obj.performer);
@@ -98,6 +105,7 @@ function getThePerformers(object) {
 }
 
 function getTheTitles(object) {
+  // returning an array of values out of given array filled with objects
   let result = [];
   for (let obj of object) {
     result.push(obj.title);
@@ -106,6 +114,7 @@ function getTheTitles(object) {
 }
 
 function arrayPrint(arr) {
+  // creating an array-like string to print it out in HTML document
   let result = "[";
   for (let item of arr) {
     result += `"${item}", `;
