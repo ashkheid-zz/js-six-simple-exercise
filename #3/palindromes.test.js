@@ -4,7 +4,7 @@ test("palindromes(\"racecar\") => true", () => {
   expect(palindromes("racecar") ).toBe(true);
 });
 
-test("palindromes(\"racecar\") => true", () => {
+test("palindromes(\"jungle\") => false", () => {
   expect(palindromes("jungle") ).toBe(false);
 });
 
@@ -12,7 +12,7 @@ test("palindromes(\"LevEl\") => true", () => {
   expect(palindromes("LevEl") ).toBe(true);
 });
 
-test("palindromes(\"ma@dam\") => true", () => {
+test("palindromes(\"ma@dam\") => false", () => {
   expect(palindromes("ma@dam") ).toBe(false);
 });
 
