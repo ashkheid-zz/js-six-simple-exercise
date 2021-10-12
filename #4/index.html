@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="../general.css" />
+    <title>Exercise Four</title>
+  </head>
+  <body>
+    <h1>Object Getter Function</h1>
+    <p>
+      You are given an array of objects that represent events with a performer
+      and an event title that looks like this:
+    </p>
+    <pre>
+      <code>const events = [
+        {
+          performer: "Joe kelly",
+          title: "Nirvana of 21"
+        },
+        {
+          performer: "Misa Ro",
+          tile: "Days Go By"
+        }
+      ]</code>
+    </pre>
+    <p>
+      Your job is to write two functions that takes the array and returns an
+      array of performers and titles:
+    </p>
+    <code>getThePerformers(events) // [‘Joe kelly','Misa Ro']</code>
+    <br />
+    <br />
+    <code>getTheTitles(events) // ['Nirvana of 21','Days Go By']</code>
+    <p>Hints: You can use built-in Javascript to do the work!</p>
+    <br />
+    <hr />
+    <br />
+    <p>
+      Let's generate an array of objects:<br />
+      <small>Refresh the page to generate a whole new object</small>
+    </p>
+
+    <label for="objCount">How many Objects?</label>
+    <input
+      type="number"
+      id="objCount"
+      name="objCount"
+      placeholder="between 1-20"
+    />
+    <br />
+    <br />
+    <button id="getPrfrmrs">Get The Performers</button>
+    <button id="getTtl">Get The Titles</button>
+  </body>
+</html>
