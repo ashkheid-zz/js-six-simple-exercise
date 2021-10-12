@@ -57,7 +57,7 @@ function sumRange(startNumber, endNumber) {
   // Thus, I wrap them all into a function called sumRange_init() which handle this initialize-like step for me.
   let range = sumRange_init(startNumber, endNumber);
 
-  // ATTENTION: I have to implementations of sumRange(). One by using a for loop, and the other one by using recursive function. comment/uncomment yuo wish to try.
+  // ATTENTION: I have two implementations of sumRange(). One by using a for loop, and the other one by using recursive function. comment/uncomment yuo wish to try.
 
   return sumRange_recursive(range[0], range[1]);
   // return sumRange_loop(range[0], range[1]);
