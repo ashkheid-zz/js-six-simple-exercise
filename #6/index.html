@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./require.js" defer></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="../general.css" />
+    <title>Exercise Six</title>
+  </head>
+  <body>
+    <h1>Caesar Decipher Function</h1>
+    <p>
+      Write decoder for the Caesar cipher. For example:
+    </p>
+    <code>caesar('Mjqqt, Btwqi!', 5) //returns 'Hello, World!'</code>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <label for="plainText">Write down the text you wish to decipher:</label><br />
+    <textarea id="plainText" name="plainText" rows="8" cols="60"></textarea>
+    <br />
+    <br />
+    <label for="shift">How many letter(s) to shift?</label>
+    <input
+      type="number"
+      id="shift"
+      name="shift"
+    />
+    <br />
+    <br />
+    <button id="run">RUN</button>
+  </body>
+</html>
