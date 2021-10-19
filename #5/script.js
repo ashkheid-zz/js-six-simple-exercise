@@ -2,7 +2,7 @@ let plainText = document.getElementById("plainText"),
   shift = document.getElementById("shift"),
   run = document.getElementById("run");
 
-let regEx = /[a-zA-Z]/g;
+let regEx = /[a-zA-Z]/;
 
 // Check if the given string is lowerCase or not
 let isLowerCase = (char) => char === char.toLowerCase();
@@ -31,8 +31,8 @@ function caesar(str, shift) {
       newString.push(
         String.fromCharCode(
           isLowerCase(char)
-            ? toLowerCaseCharCode(char.charCodeAt(0) + shift)
-            : toUpperCaseCharCode(char.charCodeAt(0) + shift)
+            ? toLowerCaseCharCode(Number(char.charCodeAt(0)) + Number(shift))
+            : toUpperCaseCharCode(Number(char.charCodeAt(0)) + Number(shift))
         )
       );
     } else {
@@ -61,7 +61,7 @@ function addElement(val) {
   newPara.setAttribute("id", "result");
 
   // and give it some content
-  const divContent = document.createTextNode(`The Resault is: ${val}`);
+  const divContent = document.createTextNode(`The Result is: ${val}`);
 
   // add the text node to the newly created div
   newPara.appendChild(divContent);
@@ -71,6 +71,6 @@ function addElement(val) {
 }
 
 run.addEventListener("click", function () {
-  // printing out the resault by clicking the RUN button
+  // printing out the result by clicking the RUN button
   addElement(caesar(plainText.value, shift.value));
 });
