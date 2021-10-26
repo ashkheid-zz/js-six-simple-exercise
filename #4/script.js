@@ -51,8 +51,8 @@ let namesIndex, // going to store indexes of names array
 
 function randomUniqueNum(range, outputCount) {
   // This function is going to create an array,
-  // with (outputCount) items, filled woth random number between 0 to(range)
-  // the result would be an array filled with random uniue numbers
+  // with (outputCount) items, filled with random number between 0 to(range)
+  // the result would be an array filled with random unique numbers
   let arr = [];
   for (let i = 0; i < range; i++) {
     arr.push(i);
@@ -70,13 +70,13 @@ function randomUniqueNum(range, outputCount) {
   return result;
 }
 
-// creating two arrays filled with random uniqque numbers between 0 to 19
-// it's going to help creating a randome object.values
+// creating two arrays filled with random unique numbers between 0 to 19
+// it's going to help creating a random object.values
 namesIndex = randomUniqueNum(20, 20);
 booksIndex = randomUniqueNum(20, 20);
 
 function eventGenerator(count) {
-  if (count > 0 && count <= 20) { // I'm not ganna let you create more than 20 events. You can't enter zero or negative value either.
+  if (count > 0 && count <= 20) { // I'm not gonna let you create more than 20 events. You can't enter zero or negative value either.
     let result = [];
     let obj = {};
     for (let i = 0; i < count; ++i) { // filling the result with randomized-value object
@@ -89,7 +89,7 @@ function eventGenerator(count) {
     return result;
   } else {
     let error =
-      "Notting Created! The number you add should be greater than 0 and less than 21";
+      "Nothing Created! The number you add should be greater than 0 and less than 21";
     addElement(error); // printing the error message into HTML document
     throw new Error(error);
   }
@@ -140,7 +140,7 @@ function addElement(val) {
   newPara.setAttribute("id", "result");
 
   // and give it some content
-  const divContent = document.createTextNode(`The Resault is: ${val}`);
+  const divContent = document.createTextNode(`The Result is: ${val}`);
 
   // add the text node to the newly created div
   newPara.appendChild(divContent);
@@ -150,11 +150,11 @@ function addElement(val) {
 }
 
 getPrfrmrs.addEventListener("click", function () {
-  // printing out the resault by clicking the RUN button
+  // printing out the result by clicking the RUN button
   addElement(`${arrayPrint(getThePerformers(eventGenerator(objCount.value)))}`);
 });
 
 getTtl.addEventListener("click", function () {
-  // printing out the resault by clicking the RUN button
+  // printing out the result by clicking the RUN button
   addElement(`${arrayPrint(getTheTitles(eventGenerator(objCount.value)))}`);
 });
