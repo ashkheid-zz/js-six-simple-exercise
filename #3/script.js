@@ -19,7 +19,7 @@ function palindromes(text) {
   // turin the text into lower-case letter and then try to trim it
   text = textTrim(text.toLowerCase());
 
-  // comparing the trimed palindromes()'s parameter with it's reversed version. if true, it is palindrome and if false, it's not!
+  // comparing the trimer palindromes()'s parameter with it's reversed version. if true, it is palindrome and if false, it's not!
   return text.split("").reverse().join("") == text;
 }
 
@@ -41,7 +41,7 @@ function addElement(val) {
   newPara.setAttribute("id", "result");
 
   // and give it some content
-  const divContent = document.createTextNode(`The Resault is: ${val}`);
+  const divContent = document.createTextNode(`The Result is: ${val}`);
 
   // add the text node to the newly created div
   newPara.appendChild(divContent);
@@ -51,7 +51,7 @@ function addElement(val) {
 }
 
 runBtn.addEventListener("click", function () {
-  // printing out the resault by clicking the RUN button
+  // printing out the result by clicking the RUN button
   addElement(
     `${text.value === "" ? '"Empty String"' : text.value} is${
       palindromes(text.value) ? "" : "n't"

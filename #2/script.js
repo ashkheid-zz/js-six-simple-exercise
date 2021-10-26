@@ -81,7 +81,7 @@ function addElement(val) {
   newPara.setAttribute("id", "result");
 
   // and give it some content
-  const divContent = document.createTextNode(`The Resault is: ${val}`);
+  const divContent = document.createTextNode(`The Result is: ${val}`);
 
   // add the text node to the newly created div
   newPara.appendChild(divContent);
@@ -91,6 +91,6 @@ function addElement(val) {
 }
 
 runBtn.addEventListener("click", function () {
-  // printing out the resault by clicking the RUN button
+  // printing out the result by clicking the RUN button
   addElement(sumRange(firstNumber.value, secondNumber.value));
 });
